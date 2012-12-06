@@ -2,8 +2,14 @@
 ;; See file "html-parsing.rkt" for legal info.
 ;; $Id: test-html-parsing.rkt,v 1.8 2011/08/28 03:48:35 neilpair Exp $
 
-(require neil/overeasy1/main
-         "html-parsing.rkt")
+(require sxml/html)
+
+(define-syntax-rule (with-test-section #:id something . more)
+  (begin . more))
+
+(require rackunit)
+(define-syntax-rule (test left right . more)
+  (check-equal? left right))
 
 (with-test-section
  #:id 'test-html-parsing

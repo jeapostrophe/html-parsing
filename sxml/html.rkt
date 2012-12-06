@@ -21,8 +21,6 @@
 ;;; and consulting, please contact the author.
 ;;; @end legal
 
-(require neil/xexp1/main)
-
 ;;; @section Introduction
 
 ;;; The @code{html-parsing} library provides a permissive HTML parser.  The
@@ -590,7 +588,7 @@
                                                 (quot . "\"")))))
                          (if pair
                              (cdr pair)
-                             (make-xexp-char-ref name)))))
+                             (list '& name)))))
                     ((c-pound?)
                      (let ((num  (open-output-string))
                            (hex? #f))
@@ -828,7 +826,8 @@
 ;; parameterized parser constructor.
 
 (define %html-parse:empty-elements
-  (cons '& always-empty-html-elements))
+  (cons '& '(area base br frame hr img input isindex keygen link meta object param
+                  spacer wbr)))
 
 ;; @defproc parse-html/tokenizer tokenizer normalized?
 ;;

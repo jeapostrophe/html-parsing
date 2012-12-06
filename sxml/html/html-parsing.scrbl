@@ -1,7 +1,7 @@
 #lang scribble/doc
 @; THIS FILE IS GENERATED
 @(require scribble/manual)
-@(require (for-label neil/html-parsing1/main))
+@(require (for-label sxml/html))
 @(require (for-label racket))
 @title[#:version "0.3"]{@bold{html-parsing}: Permissive Parsing of HTML to SXML/xexp in Racket}
 @author{Neil Van Dyke}
@@ -9,7 +9,7 @@
 
 License: @seclink["Legal" #:underline? #f]{LGPL 3} @(hspace 1) Web: @link["http://www.neilvandyke.org/racket-html-parsing/" #:underline? #f]{http://www.neilvandyke.org/racket-html-parsing/}
 
-@defmodule[neil/html-parsing1/main]
+@defmodule[sxml/html]
 
       
 
