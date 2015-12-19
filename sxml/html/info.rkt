@@ -1,3 +1,3 @@
 #lang setup/infotab
 (define name               "html-parsing")
-(define scribblings        '(("html-parsing.scrbl" ())))
+(define scribblings        '(("html-parsing.scrbl" () (net-library))))
